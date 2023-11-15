@@ -5,14 +5,13 @@
       __defProp(target, name, { get: all[name], enumerable: true });
   };
 
+  // src/header/header.html
+  var header_default = '<img src="./logo.png" class="app-logo" />\r\n<h1 class="app-name">Contact App</h1>\r\n<img src="./add.png" class="add-icon" />';
+
   // src/header/header.js
   var header = document.createElement("div");
   header.className = "header";
-  header.innerHTML = `
-    <img src="./logo.png" class="app-logo" />
-    <h1 class="app-name">Contact App</h1>
-    <img src="./add.png" class="add-icon" />
-  `;
+  header.innerHTML = header_default;
   document.body.appendChild(header);
 
   // src/contact-list/data.json
@@ -1885,17 +1884,18 @@
   var _2 = mixin(modules_exports);
   _2._ = _2;
 
+  // src/contact-list/contact-list.html
+  var contact_list_default = '<h2 class="name">${name}</h2>\r\n\r\n<p class="phone">${0phone}</p>';
+
   // src/contact-list/contact-list.js
   var contactList = document.createElement("div");
   contactList.className = "contact-list";
   each(data_default, (entry) => {
     const element = document.createElement("div");
     element.className = "contact";
-    element.innerHTML = `
-      <h2 class="name">${entry.name}</h2>
-      
-      <p class="phone">${entry.phone}</p>
-    `;
+    element.innerHTML = contact_list_default;
+    element.querySelector(".name").innerHTML = entry.name;
+    element.querySelector(".phone").innerHTML = entry.phone;
     contactList.appendChild(element);
   });
   document.body.appendChild(contactList);
