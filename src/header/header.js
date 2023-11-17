@@ -1,6 +1,7 @@
 import template from './header.html';
 import logo from './logo.png';
 import add from './add.png';
+import './header.css';
 
 /**
  * header
