@@ -8,7 +8,7 @@
   // src/header/add.png
   var add_default = "./add-2EFLUXPD.png";
 
-  // src/header/header.js
+  // src/header/header.ts
   var header = document.createElement("div");
   header.className = "header";
   header.innerHTML = header_default;
@@ -1563,7 +1563,7 @@
   // src/contact-list/contact-list.html
   var contact_list_default = '<h2 class="name">${name}</h2>\r\n\r\n<p class="phone">${0phone}</p>';
 
-  // src/contact-list/contact-list.js
+  // src/contact-list/contact-list.ts
   var contactList = document.createElement("div");
   contactList.className = "contact-list";
   each(data_default, (entry) => {
